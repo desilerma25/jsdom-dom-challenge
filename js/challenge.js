@@ -44,12 +44,8 @@ timeCounter = function handleTimer() {
 
 timeCounter()
 
-//add listener to click on buttons
-
 button.addEventListener('click', event => {
     if(event.target.id === 'pause'){
-    //change button to resume
-    //pause timer
     clearInterval(timer)
     minus.removeEventListener('click', handleMinus, true)
     plus.removeEventListener('click', handlePlus, true)
@@ -58,8 +54,7 @@ button.addEventListener('click', event => {
     button.innerHTML =  'resume'
     }
     else if(event.target.id === 'resume'){
-    //resume timer
-    //change text to 'pause'
+
     timeCounter()
     minus.addEventListener('click', handleMinus, true)
     plus.addEventListener('click', handlePlus, true)
